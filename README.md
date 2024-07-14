@@ -1,6 +1,6 @@
 # Hangman Game using Python
 
-Welcome to the Hangman Game! This project is a simple text-based implementation of the classic word-guessing game Hangman, where players attempt to guess a hidden word one letter at a time. Each incorrect guess results in a loss of a life, and the game continues until either the word is completely guessed or the player runs out of lives.
+Welcome to the Hangman Game! This project is a simple tkinter GUI integrated example of the classic word-guessing game Hangman, where players attempt to guess a hidden word one letter at a time. Each incorrect guess results in a loss of a life, and the game continues until either the word is completely guessed or the player runs out of lives.
 
 #### Project Files:
 ##### project.py
@@ -30,20 +30,18 @@ This function checks whether the game is over. The game is considered over if th
 Arguments: word (string), correct (set of characters), attempts (integer)
 Returns: Tuple containing a boolean (game over status) and a message (string)
 
-##### hangman_game():
+##### class Hangman :
 
-This function contains the main game loop. It initializes the game state, manages player input, updates the game state based on guesses, and checks for game over conditions. It prints the current state of the game and prompts the player for guesses until the game is over.
-No arguments or return values
+This function contains the main game loop. It initializes the game state, manages player input, updates the game state based on guesses, and checks for game over conditions. It prints the current state of the game and get the input from the player using the buttons.
 
 ##### main():
 
-This function is the entry point of the program. It prints a welcome message and starts the Hangman game by calling the hangman_game function.
-No arguments or return values
+This function is the entry point of the program. It starts the Hangman game by calling the Hangman class.
 
 #### Design Choices:
+
+Class : Class is used to initalize the GUI and also for the flow of events.
 
 Word List: A small set of words is hardcoded in the hangman_game function. This choice was made for simplicity and ease of testing. In a more advanced version, the word list could be externalized or expanded.
 
 Set Data Structure: Sets are used to track correct and incorrect guesses. This choice provides efficient lookups and ensures that each letter is only stored once, avoiding duplicate guesses.
-
-Game Loop: The main game loop is designed to continue until the player either guesses the word correctly or runs out of attempts. The game state is updated and displayed to the player after each guess.
